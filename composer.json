@@ -1,0 +1,28 @@
+{
+  "name": "kyocera-printer-utility",
+  "description": "Utility for Kyocera printers",
+  "keywords": ["kyocera", "printer"],
+  "homepage": "http://github.com/Rowe",
+  "type": "project",
+  "license": "MIT license",
+  "support": {
+    "issues": "https://github.com/rowe/kyocera-printer-utility/issues?state=open",
+    "source": "https://github.com/rowe/kyocera-printer-utility"
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "config": {
+    "process-timeout": 999999
+  },
+  "extra": {
+    "asset-installer-paths": {
+      "npm-asset-library": "vendor/npm",
+      "bower-asset-library": "vendor/bower"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": "php init --env=Development --overwrite=n"
+  }
+}
