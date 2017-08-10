@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/kyocera-printer-utility.iml" filepath="$PROJECT_DIR$/.idea/kyocera-printer-utility.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/printer-helper.iml" filepath="$PROJECT_DIR$/.idea/printer-helper.iml" />
     </modules>
   </component>
 </project>
