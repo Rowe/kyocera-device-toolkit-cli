@@ -12,10 +12,10 @@ class NetPrinter extends Printer
 
     private $_host;
 
-    public function __construct($host, $action = [])
+    public function __construct($host)
     {
         $this->_host = $host; //TODO check host
-        parent::__construct($action);
+        parent::__construct();
     }
 
     public function connect()
@@ -27,4 +27,6 @@ class NetPrinter extends Printer
     {
 
     }
+
+
 }
