@@ -1,4 +1,5 @@
 <?php
+namespace rowe\printerHelper;
 /**
  * Created by PhpStorm.
  * User: kyocera
@@ -13,7 +14,7 @@ class KyoceraPrinter extends NetPrinter
 
     public function restart()
     {
-
+        echo 'restarting...';
     }
 
     public function wakeUp()
@@ -21,7 +22,7 @@ class KyoceraPrinter extends NetPrinter
 
     }
 
-    public function panel()
+    public function getPanelMessage()
     {
 
     }
