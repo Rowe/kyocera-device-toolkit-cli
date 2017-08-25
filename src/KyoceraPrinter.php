@@ -87,10 +87,17 @@ class KyoceraPrinter extends NetPrinter
 
         xml_parse_into_struct(xml_parser_create(), $rst, $values);
 
-    print_r($values);
-        print_r(array_search('KMDEVINFO:MESSAGE', $values));
 
+        print_r($this->getValueByTagName($values, 'KMDEVINFO:MESSAGE'));
+    }
 
+    private function getValueByTagName($array, $tagName)
+    {
+        foreach ($array as $arr) {
+            if ($arr['tag'] == $tagName) {
+                return $arr['value'];
+            }
+        }
     }
 
 
