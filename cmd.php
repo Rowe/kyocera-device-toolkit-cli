@@ -63,7 +63,8 @@ if ($list) {
                 $printer->wakeUp();
                 break;
         }
-
+    } else {
+        $stdio->errln('The input host name:' . $host . ' is illegal value.');
     }
 
 
