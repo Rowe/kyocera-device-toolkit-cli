@@ -1,4 +1,5 @@
 <?php
+
 namespace rowe\printerHelper;
 
 /**
@@ -79,6 +80,17 @@ class KyoceraPrinter extends NetPrinter
 
         $dstAddr = 'http://' . $host . ':9090/ws/km-wsdl/information/device_information';
         return @file_get_contents($dstAddr, false, $context);
+    }
+
+
+    public function userAuth()
+    {
+
+    }
+
+    public function userLogout()
+    {
+
     }
 
     public function getPanelMessage()
