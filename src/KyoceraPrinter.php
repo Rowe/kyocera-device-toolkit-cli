@@ -2,13 +2,6 @@
 
 namespace rowe\printerHelper;
 
-/**
- * Created by PhpStorm.
- * User: kyocera
- * Date: 2017/8/11
- * Time: 17:27
- */
-
 use rowe\printerHelper\NetPrinter;
 
 class KyoceraPrinter extends NetPrinter
@@ -46,7 +39,8 @@ class KyoceraPrinter extends NetPrinter
                     'KMDEVINF_SOAPAction:  "http://www.kyoceramita.com/ws/km-wsdl/information/device_information/get_device_constitution_information"',
                 ],
 
-                'content' => '<?xml version="1.0" encoding="UTF-8" ?>
+                'content' => '
+                <?xml version="1.0" encoding="UTF-8" ?>
                 <SOAP-ENV:Envelope
                     xmlns:SOAP-ENV="http://www.w3.org/2003/05/soap-envelope"
                     xmlns:SOAP-ENC="http://www.w3.org/2003/05/soap-encoding"
@@ -96,10 +90,7 @@ class KyoceraPrinter extends NetPrinter
     public function getPanelMessage()
     {
         $rst = $this->getDeviceInfo();
-
         xml_parse_into_struct(xml_parser_create(), $rst, $values);
-
-
         print_r($this->getValueByTagName($values, 'KMDEVINFO:MESSAGE'));
     }
 

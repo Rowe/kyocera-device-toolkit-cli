@@ -37,8 +37,6 @@ $help->setOptions(array(
 ));
 
 
-//$stdio->outln($help->getHelp('printer-helper'));
-
 $list = $getopt->get('--list', $getopt->get('-l'));
 $host = $getopt->get('--host', $getopt->get('-h'));
 $action = $getopt->get('--action', $getopt->get('-a'));
@@ -66,8 +64,6 @@ if ($list) {
     } else {
         $stdio->errln('The input host name:' . $host . ' is illegal value.');
     }
-
-
 }
 
 exit(\Aura\Cli\Status::USAGE);
